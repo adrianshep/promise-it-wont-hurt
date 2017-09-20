@@ -1,4 +1,10 @@
+var timeoutID = scope.setTimeout(delayedPrint, 300);
 
+function delayedPrint() {
+  print('TIMED OUT!');
+}
+
+timeoutID();
 
 
 /*
