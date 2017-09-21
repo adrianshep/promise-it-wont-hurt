@@ -1,3 +1,15 @@
+setTimeout(function () {
+  // After 300ms has elapsed, print out 'TIMED OUT!'
+
+  console.log('TIMED OUT!');
+}, 300);
+
+
+/*
+
+Below attempt at solution:
+ReferenceError: scope is not defined
+
 var timeoutID = scope.setTimeout(delayedPrint, 300);
 
 function delayedPrint() {
@@ -6,8 +18,24 @@ function delayedPrint() {
 
 timeoutID();
 
+*/
 
 /*
+
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    'use strict';
+
+    // Set a timeout of 300ms
+
+    setTimeout(function () {
+      // After 300ms has elapsed, print out 'TIMED OUT!'
+
+      console.log('TIMED OUT!');
+    }, 300);
+
+────────────────────────────────────────────────────────────────────────────────
 
 Promise It Won’t Hurt
 ───────────────────────
