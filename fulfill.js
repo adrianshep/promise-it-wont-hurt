@@ -7,7 +7,11 @@ var promise = new Promise(function (fulfill, reject) {
 
 // Your solution here
 
+setTimeout(function () {
+  // After 300ms has elapsed, print out 'TIMED OUT!'
 
+  console.log('FULFILLED!');
+}, 300);
 
 /*
 
