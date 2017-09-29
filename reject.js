@@ -3,17 +3,17 @@
 var promise = new Promise(function (fulfill, reject) {
   // Your solution here
   setTimeout(function () {
-    fulfill('FULFILLED!');
+    reject(new Error('REJECTED!'));
   }, 300);
 });
 
 function onReject (error) {
   // Your solution here
-reject('REJECTED!');
+  console.log(error.message);
 }
 
 // Your solution here
-promise.then(console.log);
+promise.then(null, onReject);
 
 /*
 
