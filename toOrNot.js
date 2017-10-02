@@ -1,19 +1,14 @@
 'use strict';
 
 var promise = new Promise(function (fulfill, reject) {
-  // Your solution here
-  function onFulfill (fulfill) {
     fulfill('I FIRED');
-  };
-
-  function onReject (reject) {
-    // Your solution here
-    reject('I DID NOT FIRE');
-  }
-
+    reject(new Error('I DID NOT FIRE'));
 });
 
-// Your solution here
+function onReject (error) {
+  console.log(error.message);
+  }
+
 promise.then(console.log);
 
 
