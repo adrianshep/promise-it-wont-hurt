@@ -9,10 +9,28 @@ function onReject (error) {
   console.log(error.message);
   }
 
-promise.then(console.log);
+promise.then(console.log, onReject);
 
 
 /*
+
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    'use strict';
+
+    var promise = new Promise(function (fulfill, reject) {
+      fulfill('I FIRED');
+      reject(new Error('I DID NOT FIRE'));
+    });
+
+    function onReject(error) {
+      console.log(error.message);
+    }
+
+    promise.then(console.log, onReject);
+
+────────────────────────────────────────────────────────────────────────────────
 
 To reject or not to reject
  Exercise 4 of 13
