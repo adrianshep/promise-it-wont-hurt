@@ -1,5 +1,12 @@
+'use strict';
 
-
+var promise = new Promise(function (fulfill, reject) {
+  // Your solution here
+  function () {
+    fulfill('PROMISE VALUE');
+    console.log('MAIN PROGRAM');
+  }
+});
 
 /*
 
