@@ -3,8 +3,11 @@
 var promise = new Promise(function (fulfill, reject) {
   // Your solution here
     fulfill('PROMISE VALUE');
-    console.log('MAIN PROGRAM');
 });
+
+promise.then(console.log);
+
+console.log('MAIN PROGRAM');
 
 /*
 
