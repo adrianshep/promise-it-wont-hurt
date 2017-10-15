@@ -11,6 +11,26 @@ secondPromise.then(console.log);
 
 /*
 
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    'use strict';
+
+    /* global first, second */
+
+    var firstPromise = first();
+
+    var secondPromise = firstPromise.then(function (val) {
+      return second(val);
+    });
+
+    secondPromise.then(console.log);
+
+    // As an alternative to the code above, you could also do this:
+    // first().then(second).then(console.log);
+
+────────────────────────────────────────────────────────────────────────────────
+
 Promise after promise
  Exercise 7 of 13
 
