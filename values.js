@@ -1,4 +1,8 @@
-
+doSomeSetup()
+  .then(function () {
+    return cache.fetchModel(id) || promisedAjax("users/" + id);
+  })
+  .then(displayUser)
 
 
 /*
