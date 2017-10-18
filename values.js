@@ -1,8 +1,12 @@
-doSomeSetup()
-  .then(function () {
-    return cache.fetchModel(id) || promisedAjax("users/" + id);
-  })
-  .then(displayUser)
+'use strict';
+
+function attachTitle(name) {
+  return 'DR. ' + name;
+}
+
+Promise.resolve('MANHATTAN')
+  .then(attachTitle)
+  .then(console.log);
 
 
 /*
