@@ -11,6 +11,21 @@ Promise.resolve('MANHATTAN')
 
 /*
 
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    'use strict';
+
+    function attachTitle(name) {
+      return 'DR. ' + name;
+    }
+
+    Promise.resolve('MANHATTAN')
+      .then(attachTitle)
+      .then(console.log);
+
+────────────────────────────────────────────────────────────────────────────────
+
 Values and promises
  Exercise 8 of 13
 
