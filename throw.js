@@ -16,6 +16,35 @@ parsePromised(process.argv[2])
 
 /*
 
+Official Solution is above, but doesn't verify:
+
+Your submission results compared to the expected:
+
+                 ACTUAL                                 EXPECTED
+────────────────────────────────────────────────────────────────────────────────
+
+   "SyntaxError: Unexpected token o in JSON at position 1" ==    "SyntaxError: Unexpected token o in JSON at position 1"
+   "    at JSON.parse (<anonymous>)"   ==    "    at JSON.parse (<anonymous>)"
+   "    at /Users/adrianshepelavey/nodeschool/promise-it-wont-hurt/throw.js:6:20" !=    "    at /usr/local/lib/node_modules/promise-it-wont-hurt/exercises/throw_an_error/solution/solution.js:6:20"
+   "    at parsePromised (/Users/adrianshepelavey/nodeschool/promise-it-wont-hurt/throw.js:4:10)" !=    "    at parsePromised (/usr/local/lib/node_modules/promise-it-wont-hurt/exercises/throw_an_error/solution/solution.js:4:10)"
+   "    at Object.<anonymous> (/Users/adrianshepelavey/nodeschool/promise-it-wont-hurt/throw.js:13:1)" !=    "    at Object.<anonymous> (/usr/local/lib/node_modules/promise-it-wont-hurt/exercises/throw_an_error/solution/solution.js:13:1)"
+   "    at Module._compile (module.js:571:32)" ==    "    at Module._compile (module.js:571:32)"
+   "    at Object.Module._extensions..js (module.js:580:10)" ==    "    at Object.Module._extensions..js (module.js:580:10)"
+   "    at Module.load (module.js:488:32)" ==    "    at Module.load (module.js:488:32)"
+   "    at tryModuleLoad (module.js:447:12)" ==    "    at tryModuleLoad (module.js:447:12)"
+   "    at Function.Module._load (module.js:439:3)" ==    "    at Function.Module._load (module.js:439:3)"
+   "    at Module.runMain (module.js:605:10)" ==    "    at Module.runMain (module.js:605:10)"
+   ""                                  ==    ""
+
+────────────────────────────────────────────────────────────────────────────────
+
+✗ Submission results did not match expected!
+
+# FAIL
+
+Your solution to Throw an error didn't pass. Try again!
+
+
 Throw an error
  Exercise 9 of 13
 
