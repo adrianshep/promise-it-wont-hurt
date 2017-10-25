@@ -5,7 +5,7 @@ function iterate(num) {
   return num + 1;
 }
 
-function alwaysThrows () {
+function alwaysThrows() {
   throw new Error('OH NOES');
 }
 
@@ -28,6 +28,28 @@ Promise.resolve(iterate(1))
 
 
 /*
+
+Your submission results compared to the expected:
+
+                 ACTUAL                                 EXPECTED
+────────────────────────────────────────────────────────────────────────────────
+
+   "1"                                 ==    "1"
+   "2"                                 ==    "2"
+   "3"                                 ==    "3"
+   "4"                                 ==    "4"
+   "5"                                 ==    "5"
+   "OH NOES"                           !=    "Error: OH NOES"
+   ""                                  !=    "    at alwaysThrows (/usr/local/lib/node_modules/promise-it-wont-hurt/exercises/an_important_rule/solution/solution.js:7:9)"
+                                       !=    "    at Module.runMain (module.js:607:11)"
+                                       !=    "    at run (bootstrap_node.js:425:7)"
+                                       !=    "    at startup (bootstrap_node.js:146:9)"
+                                       !=    "    at bootstrap_node.js:540:3"
+                                       !=    ""
+
+────────────────────────────────────────────────────────────────────────────────
+
+✗ Submission results did not match expected!
 
 An important rule
  Exercise 10 of 13
