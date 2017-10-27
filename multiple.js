@@ -1,4 +1,11 @@
+'use strict';
 
+function all(a,b) {
+  return new Promise(function (fulfill, reject) {
+    var counter = 0;
+    var out = [];
+  });
+}
 
 
 /*
