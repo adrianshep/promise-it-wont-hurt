@@ -10,33 +10,20 @@ qhttp.read("http://localhost:1337")
 
 /*
 
-Error: Cannot find module 'q-io/http'
-    at Function.Module._resolveFilename (module.js:470:15)
-    at Function.Module._load (module.js:418:25)
-    at Module.require (module.js:498:17)
-    at require (internal/module.js:20:19)
-    at Object.<anonymous> (/Users/adrianshepelavey/nodeschool/promise-it-wont-hurt/fetch.js:1:75)
-    at Module._compile (module.js:571:32)
-    at Object.Module._extensions..js (module.js:580:10)
-    at Module.load (module.js:488:32)
-    at tryModuleLoad (module.js:447:12)
-    at Function.Module._load (module.js:439:3)
+Here's the official solution in case you want to compare notes:
 
-Your submission results compared to the expected:
-
-                 ACTUAL                                 EXPECTED
 ────────────────────────────────────────────────────────────────────────────────
+    var qhttp = require('q-io/http');
 
-   ""                                  !=    "{ id: 1337, name: 'Katy Perry', occupation: '???' }"
-                                       !=    ""
+    qhttp.read("http://localhost:1337")
+    .then(function (json) {
+      console.log(JSON.parse(json));
+    })
+    .then(null, console.error)
+    .done()
 
 ────────────────────────────────────────────────────────────────────────────────
 
-✗ Submission results did not match expected!
-
-# FAIL
-
-Your solution to Fetch JSON didn't pass. Try again!
 
 Fetch JSON
  Exercise 12 of 13
