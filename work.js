@@ -13,6 +13,25 @@ qhttp.read("http://localhost:7000/")
 
 /*
 
+Here's the official solution in case you want to compare notes:
+
+────────────────────────────────────────────────────────────────────────────────
+    var qhttp = require('q-io/http');
+
+    qhttp.read("http://localhost:7000/")
+    .then(function (id) {
+      return qhttp.read("http://localhost:7001/" + id);
+    })
+    .then(function (json) {
+      console.log(JSON.parse(json));
+    })
+    .then(null, console.error)
+    .done();
+
+────────────────────────────────────────────────────────────────────────────────
+
+
+
 Do some work
  Exercise 13 of 13
 
